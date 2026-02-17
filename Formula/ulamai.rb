@@ -8,7 +8,7 @@ class Ulamai < Formula
   def install
     libexec.install "install.sh"
     ENV["ULAM_VENV_DIR"] = (libexec/"venv").to_s
-    system "bash", (libexec/"install.sh").to_s
+    system "bash", "install.sh"
     bin.install_symlink libexec/"venv/bin/ulam" => "ulam"
   end
 
