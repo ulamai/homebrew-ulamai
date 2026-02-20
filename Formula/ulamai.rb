@@ -1,17 +1,16 @@
 class Ulamai < Formula
+  include Language::Python::Virtualenv
+
   desc "Ulam AI prover CLI for Lean 4"
   homepage "https://github.com/ulamai/ulamai"
-  url "https://github.com/ulamai/ulamai/archive/refs/tags/v0.1.11.tar.gz"
-  sha256 "df61a9732fd7f9b80e13f0139a2885ef1ffede6c038b12f36478316a5ca3550c"
+  url "https://github.com/ulamai/ulamai/archive/refs/tags/v0.1.12.tar.gz"
+  sha256 "c675c05e03181f3efc543bdecca4ff9eab539a8203beea3ebad6217fc519e816"
   license "MIT"
 
   depends_on "python@3.12"
 
   def install
-    python = Formula["python@3.12"].opt_bin/"python3.12"
-    ENV["PIP_DISABLE_PIP_VERSION_CHECK"] = "1"
-    ENV["PIP_BREAK_SYSTEM_PACKAGES"] = "1"
-    system python, "-m", "pip", "install", ".", "--prefix=#{prefix}"
+    virtualenv_install_with_resources
   end
 
   test do
