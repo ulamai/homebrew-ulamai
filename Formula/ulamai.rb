@@ -4,7 +4,7 @@ class Ulamai < Formula
   desc "Ulam AI prover CLI for Lean 4"
   homepage "https://github.com/ulamai/ulamai"
   url "https://github.com/ulamai/ulamai/archive/refs/tags/v0.1.16.tar.gz"
-  sha256 "605b63f84ace6789dff24edfc6bf94519210faa0000c76074e4dda8c65c2cea0"
+  sha256 "be86495e0b804edea167ffc3f3ac8e763f07208a0f90b7b0245a432526c02d98"
   license "MIT"
 
   depends_on "python@3.12"
